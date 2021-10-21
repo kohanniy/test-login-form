@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { Counter } from './features/counter/Counter';
 import './App.scss';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Profile from './pages/Profile';
 
 function App() {

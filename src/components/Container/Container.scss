@@ -1,0 +1,10 @@
+.container {
+  outline: 1px solid red; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  &__disableGutters {
+    padding: 0;
+  }
+}

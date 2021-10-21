@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+
+.paragraph {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  color: $font-color;
+
+  &__error {
+    color: $error-color;
+  }
+}
