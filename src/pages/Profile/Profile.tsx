@@ -1,4 +1,4 @@
-import { useUserSelector } from '../../app/hooks';
+import { useAppSelector } from '../../app/hooks';
 import Container from '../../components/Container/Container';
 import Title from '../../components/Title/Title';
 import { withMainLayout } from '../../layouts/MainLayout/MainLayout';
@@ -6,7 +6,7 @@ import { userName } from '../../slices/user/userSlice';
 import './Profile.scss';
 
 function Profile() {
-  const username = useUserSelector(userName);
+  const username = useAppSelector(userName);
 
   return (
     <Container 

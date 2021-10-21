@@ -1,0 +1,47 @@
+@import '../../scss/variables';
+
+@keyframes alarm {
+  10% {
+    transform: rotate(-50deg);
+  }
+  20% {
+    transform: rotate(50deg);
+  }
+  40% {
+    transform: rotate(-30deg);
+  }
+  60% {
+    transform: rotate(30deg);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  border: 1px solid $base-color;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 500;
+  border-radius: 15px;
+  color: $base-color;
+  background: transparent;
+
+  &__disabled {
+    opacity: 0.6;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      cursor: pointer;
+      animation: alarm 0.5s ease-in-out 1;
+    }
+  }
+}

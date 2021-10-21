@@ -1,18 +1,16 @@
-import React from 'react';
 import {
   Switch,
   Route,
   Redirect
 } from 'react-router-dom';
-import './App.scss';
-import { useUserSelector } from './app/hooks';
+import { useAppSelector } from './app/hooks';
 import Login from './pages/Login/Login';
 import Profile from './pages/Profile/Profile';
 import { userName } from './slices/user/userSlice';
 
 function App() {
-  const username = useUserSelector(userName);
-  
+  const username = useAppSelector(userName);
+
   return (
     <Switch>
       <Route exact path='/'>

@@ -1,6 +1,6 @@
 import { FormEventHandler } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useUserDispatch } from '../../app/hooks';
+import { useAppDispatch } from '../../app/hooks';
 import { setUsername } from '../../slices/user/userSlice';
 import Container from '../../components/Container/Container';
 import InputGroup from '../../components/InputGroup/InputGroup';
@@ -8,9 +8,10 @@ import Title from '../../components/Title/Title';
 import useValidationForm from '../../hooks/useValidationForm';
 import { withMainLayout } from '../../layouts/MainLayout/MainLayout';
 import './Login.scss';
+import { Button } from '../../components/Button/Button';
 
 function Login() {
-  const dispatch = useUserDispatch();
+  const dispatch = useAppDispatch();
   const history = useHistory();
 
   const {
@@ -36,6 +37,7 @@ function Login() {
       label: 'Пароль',
       inputName: 'password',
       inputProps: {
+        type: 'password',
         onChange: handleChange,
         pattern: '123456',
         required: true,
@@ -71,7 +73,7 @@ function Login() {
             />
           ))
         }
-        <button type='submit' disabled={!isValid}>Войти</button>
+        <Button type='submit' disabled={!isValid}>Войти</Button>
       </form>
     </Container>
   )

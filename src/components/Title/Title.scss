@@ -1,6 +1,6 @@
 $titles:
-  'h1' 40px 700,
-  'h2' 35px 600,
+  'h1' 40px 900,
+  'h2' 35px 700,
   'h3' 30px 500;
 
 @mixin title($title-name, $title-size, $title-weight) {
@@ -9,7 +9,6 @@ $titles:
     font-weight: $title-weight;
   }
 }
-
 
 .title {
   margin: 0;

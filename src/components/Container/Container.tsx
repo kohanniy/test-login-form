@@ -17,56 +17,36 @@ function Container(props: ISectionProps) {
     ...rest
   } = props;
 
+  const classes = cn(
+    'container', 
+    {
+      'container__disableGutters': disableGutters === true,
+    },
+    className
+  );
+
   switch (component) {
     case 'div':
       return (
-        <div
-          {...rest}
-          className={
-            cn('container', className, {
-              'container__disableGutters': disableGutters === true,
-            })
-          }
-        >
+        <div {...rest} className={classes}>
           {children}
         </div>
       );
     case 'section':
       return (
-        <section
-          {...rest}
-          className={
-            cn('container', className, {
-              'container__disableGutters': disableGutters === true,
-            })
-          }
-        >
+        <section {...rest} className={classes}>
           {children}
         </section>
       );
     case 'article':
       return (
-        <article
-          {...rest}
-          className={
-            cn('container', className, {
-              'container__disableGutters': disableGutters === true,
-            })
-          }
-        >
+        <article {...rest} className={classes}>
           {children}
         </article>
       );
     case 'aside':
       return (
-        <aside
-          {...props}
-          className={
-            cn('container', className, {
-              'container__disableGutters': disableGutters,
-            })
-          }
-        >
+        <aside {...rest} className={classes}>
           {children}
         </aside>
       );
