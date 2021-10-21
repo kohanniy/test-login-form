@@ -5,9 +5,16 @@
   line-height: 1;
   font-weight: 400;
   margin: 0;
-  color: $font-color;
 
   &__error {
     color: $error-color;
+  }
+
+  &__secondary {
+    color: $base-color;
+  }
+
+  &__primary {
+    color: $font-color;
   }
 }

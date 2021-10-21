@@ -4,14 +4,14 @@ import './Paragraph.scss';
 
 export interface IParagraphProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement> {
   children: ReactNode;
-  error?: boolean;
+  color?: 'primary' | 'secondary' | 'danger';
 }
 
 function Typography(props: IParagraphProps) {
   const {
     children,
     className,
-    error,
+    color = 'primary',
     ...rest
   } = props;
 
@@ -21,10 +21,12 @@ function Typography(props: IParagraphProps) {
       {...rest}
       className={cn(
         'paragraph',
-        className,
         {
-          'paragraph__error': error === true,
-        }
+          'paragraph__error': color === 'danger',
+          'paragraph__primary': color === 'primary',
+          'paragraph__secondary': color === 'secondary',
+        },
+        className,
       )}
     >
       {children}

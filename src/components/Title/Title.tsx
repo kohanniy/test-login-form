@@ -5,6 +5,7 @@ import cn from 'classnames';
 interface ITitleProps extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
   children: string | ReactNode;
   variant?: 'h1' | 'h2' | 'h3';
+  component?: 'h1' | 'h2' | 'h3';
 }
 
 function Title(props: ITitleProps) {
@@ -12,39 +13,41 @@ function Title(props: ITitleProps) {
     children,
     variant = 'h1',
     className,
+    component = 'h1',
     ...rest
   } = props;
 
-  switch (variant) {
+  const classes = cn(
+    'title', 
+    {
+      'title__h1': variant === 'h1',
+      'title__h2': variant === 'h2',
+      'title__h3': variant === 'h3',
+    },
+    className
+  );
+
+  switch (component) {
     case 'h1':
       return (
-        <h1 
-          {...rest}
-          className={cn('title', className)}
-        >
+        <h1 className={classes} {...rest} >
           {children}
         </h1>
       )
     case 'h2':
       return (
-        <h2 
-          {...rest} 
-          className={cn('title', className)}
-        >
+        <h2 className={classes} {...rest}>
           {children}
         </h2>
       )
     case 'h3':
       return (
-        <h3 
-          {...rest} 
-          className={cn('title', className)}
-        >
+        <h3 className={classes} {...rest}>
           {children}
         </h3>
       )
     default:
-      throw new Error(`${variant} недопустимый тег для заголовка`)
+      throw new Error(`${component} недопустимый тег для заголовка`)
   }
 }
 

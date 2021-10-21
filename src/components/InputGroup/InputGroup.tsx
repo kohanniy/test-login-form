@@ -38,7 +38,7 @@ function InputGroup(props: IInputGroupProps) {
         )} 
         {...inputProps}
       />
-      <Paragraph error={Boolean(errors[inputName])}>
+      <Paragraph color={Boolean(errors[inputName]) ? 'danger' : 'primary'}>
         {
           Boolean(errors[inputName])
             ? errors[inputName]
