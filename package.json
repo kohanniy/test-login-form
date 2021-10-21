@@ -2,6 +2,9 @@
   "name": "test-urban-smart",
   "version": "0.1.0",
   "private": true,
+  "description": "Test project",
+  "author": "Slava Kohanniy",
+  "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^4.2.4",
