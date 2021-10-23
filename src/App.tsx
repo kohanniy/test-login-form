@@ -10,6 +10,8 @@ import { userName } from './slices/user/userSlice';
 
 function App() {
   const username = useAppSelector(userName);
+  console.log(username);
+  
 
   return (
     <Switch>
