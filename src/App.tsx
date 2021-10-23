@@ -9,7 +9,7 @@ import Profile from './pages/Profile/Profile';
 import { userName } from './slices/user/userSlice';
 
 function App() {
-  const username = useAppSelector(userName);
+  const username = useAppSelector(userName);  
 
   return (
     <Switch>
