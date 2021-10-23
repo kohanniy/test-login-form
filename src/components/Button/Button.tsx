@@ -13,7 +13,7 @@ export function Button(props: IButtonProps) {
       className={cn(
         'button', 
         {
-          'button__disabled': disabled === true
+          'button_disabled': disabled === true
         }, 
         className
       )}

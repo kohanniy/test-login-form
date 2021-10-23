@@ -12,13 +12,9 @@ function Profile() {
     <Container 
       disableGutters 
       component='section'
-      className='profile-section'
+      className='profile'
     >
-      <Title>
-        {
-          username && username
-        }
-      </Title>
+      <Title>{username}</Title>
     </Container>
 
   )

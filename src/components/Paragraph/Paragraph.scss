@@ -6,15 +6,15 @@
   font-weight: 400;
   margin: 0;
 
-  &__error {
+  &_error {
     color: $error-color;
   }
 
-  &__secondary {
+  &_secondary {
     color: $base-color;
   }
 
-  &__primary {
+  &_primary {
     color: $font-color;
   }
 }

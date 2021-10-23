@@ -3,10 +3,10 @@ $titles:
   'h2' 35px 700,
   'h3' 30px 500;
 
-@mixin title($title-name, $title-size, $title-weight) {
-  &__#{$title-name} {
-    font-size: $title-size;
-    font-weight: $title-weight;
+@mixin title($name, $size, $weight) {
+  &_#{$name} {
+    font-size: $size;
+    font-weight: $weight;
   }
 }
 

@@ -22,9 +22,9 @@ function Typography(props: IParagraphProps) {
       className={cn(
         'paragraph',
         {
-          'paragraph__error': color === 'danger',
-          'paragraph__primary': color === 'primary',
-          'paragraph__secondary': color === 'secondary',
+          'paragraph_error': color === 'danger',
+          'paragraph_primary': color === 'primary',
+          'paragraph_secondary': color === 'secondary',
         },
         className,
       )}

@@ -20,7 +20,7 @@ function Container(props: ISectionProps) {
   const classes = cn(
     'container', 
     {
-      'container__disableGutters': disableGutters === true,
+      'container_disableGutters': disableGutters === true,
     },
     className
   );

@@ -20,9 +20,9 @@ function Title(props: ITitleProps) {
   const classes = cn(
     'title', 
     {
-      'title__h1': variant === 'h1',
-      'title__h2': variant === 'h2',
-      'title__h3': variant === 'h3',
+      'title_h1': variant === 'h1',
+      'title_h2': variant === 'h2',
+      'title_h3': variant === 'h3',
     },
     className
   );
