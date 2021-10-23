@@ -5,6 +5,7 @@
   "description": "Test project",
   "author": "Slava Kohanniy",
   "license": "ISC",
+  "homepage": "https://kohanniy-login-form.netlify.app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^4.2.4",
